@@ -7,6 +7,9 @@
     --white-background: #F8F8F8;
     --black-info: #222224;
     --white-info: #FBFBFB;
+    --blue: #18a0fb;
+    --grey-products: #3A3838;
+
 }
 
 body {
@@ -34,10 +37,6 @@ body {
     margin: -1px;
 }
 
-.header__nav {
-    display: none;
-}
-
 .header {
     background-color: var(--black);
     min-height: 75px;
@@ -51,11 +50,130 @@ body {
 
 .header__logo-form-wrp {
     display: flex;
+    position: relative;
+}
+
+.header__logo {
+    margin: 18px 0 0 0;
 }
 
 .header__search {
-    margin: 0 0 0 41px;
+    margin: 28px 0 0 41px;
+    position: relative;
 }
+
+.header__search-form {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    display: none;
+    left: 30px;
+    top: 0;
+}
+
+.header__search-img:active+.header__search-form,
+.header__search-img:focus+.header__search-form,
+.header__search-img:hover+.header__search-form {
+    display: block;
+}
+
+.header__search-form:hover,
+.header__search-form:active,
+.header__search-form:focus {
+    display: block;
+}
+
+.header__search:hover .header__search-img,
+.header__search:active .header__search-img {
+    fill: var(--blue);
+}
+
+.header__menu {
+    position: relative;
+}
+
+.header__menu-btn:hover .header__menu-btn-img,
+.header__menu-btn:active .header__menu-btn-img {
+    fill: var(--blue);
+}
+
+.header__nav {
+    display: none;
+    width: 232px;
+    height: 764px;
+}
+
+.header__menu-btn:hover+.header__nav,
+.header__menu-btn:focus+.header__nav {
+    display: block;
+}
+
+.header__nav:hover {
+    display: block;
+}
+
+.header__nav {
+    position: absolute;
+    top: 75px;
+    left: 232px;
+    background-color: var(--white-background);
+}
+
+.header__nav-title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin: 37px 0 24px 34px;
+}
+
+.nav-sub-item__link-title {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--pink-color);
+    text-transform: uppercase;
+    margin: 0 0 0 33px;
+}
+
+.nav-sub-item__list {
+    display: none;
+}
+
+.nav-sub-item__link-title:hover+.nav-sub-item__list,
+.nav-sub-item__link-title:focus+.nav-sub-item__list {
+    display: block;
+}
+
+.nav-sub-item__list:active .nav-sub-item__list:focus {
+    display: block;
+}
+
+.nav-sub-item__list {
+    margin: 12px 0 20px 0;
+}
+
+.nav-sub-item__list li {
+    margin: 0 0 11px 0;
+}
+
+.nav-sub-item__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--grey-menu);
+    margin: 0 0 0 55px;
+}
+
+.header__nav-list {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+.header__link:hover .header__link-img,
+.header__link:active .header__link-img {
+    fill: var(--blue);
+}
+
 
 .header__link {
     text-decoration: none;
@@ -63,8 +181,12 @@ body {
 }
 
 .header__menu-btn {
-    border: 1px solid;
+    border: 1px solid transparent;
     background-color: transparent;
+}
+
+.nav-cross__btn {
+    display: none;
 }
 
 .brand {
@@ -85,6 +207,18 @@ body {
     font-weight: 900;
     line-height: 58px;
     text-transform: uppercase;
+    position: relative;
+}
+
+.brand__title:before {
+    content: '';
+    width: 12px;
+    height: 92px;
+    background: var(--pink-color);
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    background-size: 12px 92px;
 }
 
 .brand__subtitle {
@@ -132,8 +266,6 @@ body {
     margin: 30px 0 0 0;
 }
 
-/* Шрифты для скидок переделать */
-
 .sales__item-text {
     font-size: 16px;
     font-weight: 400;
@@ -149,7 +281,6 @@ body {
     color: var(--pink-color);
 }
 
-/*     Продукты */
 .products {
     display: flex;
     flex-direction: column;
@@ -208,6 +339,58 @@ body {
     background-color: var(--white-background);
 }
 
+/* OVERLAY CART-------------------- */
+
+.products-img-wrp {
+    position: relative;
+}
+
+.products__item-img {
+    width: 100%;
+    min-height: 420px;
+}
+
+.products__cart-overlay {
+    width: 100%;
+    min-height: 420px;
+    background: var(--grey-products);
+    opacity: 86%;
+    position: absolute;
+    top: 0;
+}
+
+.products__cart-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white-color);
+    background: none;
+    width: 138px;
+    height: 43px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-button-img {
+    margin: 0 11px 0 0;
+}
+
+.overlay {
+    display: none;
+}
+
+.products__item-img:hover+.overlay {
+    display: block;
+}
+
+/* ------------------------------------- */
+
+
 .products__btn {
     display: flex;
     justify-content: center;
@@ -221,6 +404,15 @@ body {
     width: 211px;
     height: 47px;
 }
+
+/* Overlay button -----------------------*/
+
+.products__btn:hover {
+    background-color: var(--pink-color);
+    color: var(--white-color);
+}
+
+/* ------------------------------------ */
 
 .information {
     height: 341px;
@@ -317,6 +509,39 @@ body {
     margin: 0 0 32px 0;
 }
 
+.footer__form {
+    display: flex;
+    position: relative;
+}
+
+.form__subscribe {
+    height: 49px;
+    width: 322px;
+    background-color: #E1E1E1;
+    border-radius: 75px 0px 0px 74px / 75px 0px 0px 75px;
+    border: none;
+}
+
+.form__subscribe:active,
+.form__subscribe:focus,
+.form__subscribe:hover {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.subscribe__btn {
+    background-color: var(--pink-color);
+    border-radius: 0px 75px 75px 0px / 0px 75px 75px 0px;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white-color);
+    border: none;
+    position: absolute;
+    left: 289px;
+    height: 49px;
+    width: 100px;
+}
+
 .footer__social {
     height: 79px;
     background-color: var(--black-info);
@@ -332,9 +557,30 @@ body {
     margin: 24px 0 0 0;
 }
 
-.footer__social-link {
+.footer__social-item {
+    width: 31px;
+    height: 32px;
+    background-color: var(--white-background);
     margin: 0 0 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.footer__social-item:hover,
+.footer__social-item:active,
+.footer__social-item:focus {
+    background-color: var(--pink-color);
+    
+}
+
+.footer__social-item:hover .footer__social-link,
+.footer__social-item:active .footer__social-link,
+.footer__social-item:focus .footer__social-link {
+    fill: var(--white-color);
+}
+
 
 .footer__social-text {
     margin: 30px 0 0 0;
