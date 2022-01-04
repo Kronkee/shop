@@ -1,0 +1,29 @@
+.form__subscribe {
+    height: 49px;
+    width: 322px;
+    background-color: #E1E1E1;
+    border-radius: 75px 0px 0px 74px / 75px 0px 0px 75px;
+    border: none;
+
+    &-btn {
+    background-color: $pink-color;
+    border-radius: 0px 75px 75px 0px / 0px 75px 75px 0px;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--white-color);
+    border: none;
+    position: absolute;
+    left: 289px;
+    height: 49px;
+    width: 100px;
+}
+}
+
+.form__subscribe:active,
+.form__subscribe:focus,
+.form__subscribe:hover {
+    outline: 0;
+    outline-offset: 0;
+}
+
+

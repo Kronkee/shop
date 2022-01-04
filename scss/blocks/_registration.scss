@@ -1,0 +1,18 @@
+.registration {
+
+    &__heading {
+        background-color: $pink-heading;
+        height: 148px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__heading-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+}

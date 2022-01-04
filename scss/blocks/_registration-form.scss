@@ -1,0 +1,73 @@
+.registration {
+
+
+
+    &__form {}
+
+    &__form-form {
+        display: flex;
+        flex-direction: column;
+        width: 359px;
+        margin: 64px 128px 0 0;
+    }
+
+    &__form-label {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $black;
+        margin: 0 0 20px 0;
+    }
+
+    &__form-name {
+        height: 45px;
+        margin: 0 0 20px 0;
+    }
+
+    &__form-radio {
+        display: flex;
+    }
+
+    &__form-radio-btn {}
+
+    &__form-radio-label {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: $black;
+        margin: 0 20px 33px 0;
+    }
+
+    &__form-login {
+        height: 45px;
+        margin: 0 0 20px 0;
+    }
+
+    &__form-password {
+        height: 45px;
+        margin: 0 0 15px 0;
+    }
+
+    &__form-text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: $grey-registration;
+        margin: 0 0 39px 0;
+    }
+
+    &__btn {
+        width: 167px;
+        height: 50px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $white-color;
+        background-color: $pink-color;
+        border: none;
+    }
+}

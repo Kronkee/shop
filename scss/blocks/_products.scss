@@ -1,0 +1,125 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 36px;
+        text-align: left;
+        margin: 96px 0 0 0;
+    }
+
+    &__subtitle {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 6px 0 0 0;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 48px 0 0 0;
+    }
+
+
+    &__item-title {
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin: 0 0 13px 0;
+    }
+
+    &__item {
+        width: 360px;
+
+        &-text {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: $grey-description;
+            margin: 0 0 18px 0;
+        }
+
+        &-price {
+            font-size: 16px;
+            line-height: 19px;
+            color: $pink-color;
+        }
+
+        &-img {
+            width: 100%;
+            min-height: 420px;
+        }
+    }
+
+    &__info-wrp {
+        padding: 25px 28px 20px 18px;
+        background-color: $white-background;
+    }
+
+    &-img-wrp {
+        position: relative;
+    }
+
+
+    &__cart-overlay {
+        width: 100%;
+        min-height: 420px;
+        background: $grey-products;
+        opacity: 86%;
+        position: absolute;
+        top: 0;
+    }
+
+    &__cart-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        line-height: 17px;
+        color: $white-color;
+        background: none;
+        width: 138px;
+        height: 43px;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_cart-button-img {
+        margin: 0 11px 0 0;
+    }
+
+    &_overlay {
+        display: none;
+    }
+
+    &__item-img:hover+.products_overlay {
+        display: block;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+        color: $pink-color;
+        border: 1px solid #FF6A6A;
+        width: 211px;
+        height: 47px;
+    }
+
+    &__btn:hover {
+        background-color: $pink-color;
+        color: $white-color;
+    }
+}

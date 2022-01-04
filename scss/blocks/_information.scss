@@ -1,0 +1,40 @@
+.information {
+    height: 341px;
+    background-color: $black-info;
+    margin: 95px 0 0 0;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 103px 0 0 0;
+    }
+
+    &__item {
+        width: 360px;
+        @include column-center;
+        height: 134px;
+        justify-content: space-between;
+
+        &-img {
+            max-width: 47px;
+            max-height: 40px;
+        }
+
+        &-title {
+            color: $white-info;
+            font-size: 19.96px;
+            line-height: 24px;
+        }
+
+        &-text {
+            color: $white-info;
+            font-weight: 300;
+            font-size: 13.972px;
+            line-height: 17px;
+            text-align: center;
+        }
+    }
+
+
+}
