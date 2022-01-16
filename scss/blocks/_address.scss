@@ -1,0 +1,58 @@
+.address {
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form-label {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0 0 20px 0;
+        text-transform: uppercase;
+    }
+
+    &__form-post {
+        height: 45px;
+        padding: 0 0 0 17px;
+        margin: 0 0 20px 0;
+    }
+
+    &__form-post:hover &__form-post:focus {
+        border: $blue;
+    }
+
+    &__form-post:hover::placeholder,
+    &__form-post:focus::placeholder {
+        opacity: 0, 33;
+    }
+
+    &__form-post:last-child {
+        margin: 0 0 24px 0;
+    }
+
+    &__btn {
+        width: 101px;
+        height: 35px;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4A4A4A;
+        text-transform: uppercase;
+        margin: 0 0 52px 0;
+    }
+
+    &__btn:hover,
+    &__btn:focus,
+    &__btn:active {
+        border-color: $blue;
+    }
+}
+
+.address-wrp {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    margin: 0 0 0 128px;
+}

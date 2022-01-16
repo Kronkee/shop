@@ -5,6 +5,11 @@
     border-radius: 75px 0px 0px 74px / 75px 0px 0px 75px;
     border: none;
 
+    @include mobile {
+        width: 309px;
+        height: 47px;
+    }
+
     &-btn {
     background-color: $pink-color;
     border-radius: 0px 75px 75px 0px / 0px 75px 75px 0px;
@@ -16,14 +21,22 @@
     left: 289px;
     height: 49px;
     width: 100px;
+
+    @include mobile {
+        width: 96px;
+        height: 45px;
+    }
 }
 }
 
 .form__subscribe:active,
 .form__subscribe:focus,
 .form__subscribe:hover {
-    outline: 0;
-    outline-offset: 0;
+    border: 1px solid $blue;
 }
 
-
+.form__subscribe-btn:hover,
+.form__subscribe-btn:focus,
+.form__subscribe-btn:active {
+    border: 2px solid $blue;
+}

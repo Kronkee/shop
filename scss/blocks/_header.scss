@@ -1,6 +1,7 @@
 .header {
     background-color: $black;
     min-height: 75px;
+    display: flex;
 }
 
 .header__wrp {
@@ -14,12 +15,8 @@
     position: relative;
 }
 
-.header__logo {
-    margin: 18px 0 0 0;
-}
-
 .header__search {
-    margin: 28px 0 0 41px;
+    margin: 10px 0 0 41px;
     position: relative;
 }
 
@@ -105,3 +102,17 @@
     background-color: transparent;
 }
 
+@media (max-width: $tablet-width) {
+    .header__logo-form-wrp {
+        margin: 0 0 0 16px;
+    }
+}
+
+@media (max-width: $mobile-width) {
+    .header__logo-form-wrp {
+        margin: 0;
+    }
+    .header__link {
+        display: none;
+    }
+}

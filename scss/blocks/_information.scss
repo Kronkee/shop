@@ -3,11 +3,28 @@
     background-color: $black-info;
     margin: 95px 0 0 0;
 
+    @include tablet {
+        height: 610px;
+    }
+
+    @include mobile {
+        height: 610px;
+    }
+
     &__list {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 103px 0 0 0;
+
+        @include tablet {
+            flex-direction: column;
+            padding: 0;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -16,25 +33,34 @@
         height: 134px;
         justify-content: space-between;
 
-        &-img {
-            max-width: 47px;
-            max-height: 40px;
+        @include tablet {
+            margin: 48px 0 0 0;
         }
 
-        &-title {
-            color: $white-info;
-            font-size: 19.96px;
-            line-height: 24px;
+        @include mobile {
+            margin: 47px 0 0 0;
+            width: 347px;
+            height: 129px;
         }
+    
 
-        &-text {
-            color: $white-info;
-            font-weight: 300;
-            font-size: 13.972px;
-            line-height: 17px;
-            text-align: center;
-        }
+    &-img {
+        max-width: 47px;
+        max-height: 40px;
     }
 
+    &-title {
+        color: $white-info;
+        font-size: 19.96px;
+        line-height: 24px;
+    }
 
+    &-text {
+        color: $white-info;
+        font-weight: 300;
+        font-size: 13.972px;
+        line-height: 17px;
+        text-align: center;
+    }
+}
 }

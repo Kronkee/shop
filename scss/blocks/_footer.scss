@@ -1,11 +1,27 @@
 .footer__img {
     background-image: url(../img/footer-img.jpg);
     height: 448px;
-    width: 1598px;
+    background-size: cover;
+
+    @include tablet {
+        height: 100%;
+    }
+
+    @include mobile {
+        height: 100%;
+    }
 }
 
 .footer__items {
     display: flex;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 .footer__item-review {
@@ -14,12 +30,28 @@
     &-img {
         max-width: 96px;
         margin: 97px 0 0 0;
+
+        @include tablet {
+            margin: 54px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 54px 0 0 0;
+        }
     }
 
     &-quote {
         width: 359px;
         margin: 30px 0 0 0;
         text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @include mobile {
+            font-size: 19px;
+            line-height: 23px;
+        }
     }
 }
 
@@ -37,6 +69,14 @@
         line-height: 167.2%;
         text-transform: uppercase;
         margin: 150px 0 0 0;
+
+        @include tablet {
+            margin: 48px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 59px 0 0 0;
+        }
     }
 
     &-subtitle {
@@ -45,26 +85,58 @@
         text-align: center;
         text-transform: uppercase;
         margin: 0 0 32px 0;
+
+        @include tablet {
+            margin: 0 0 27px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 22px 0;
+        }
     }
 }
 
 .footer__form {
     display: flex;
     position: relative;
+    height: 49px;
+
+    @include tablet {
+        margin: 0 0 140px 0;
+    }
+
+    @include mobile {
+        margin: 0 0 110px 0;
+    }
 }
 
 .footer__social {
     height: 79px;
     background-color: $black-info;
 
+    @include mobile {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 143px;
+    }
+
     &-wrp {
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &-list {
         display: flex;
         margin: 24px 0 0 0;
+
+        @include mobile {
+            margin: 43px 0 0 0;
+        }
     }
 
     &-item {
@@ -75,8 +147,16 @@
         @include flex-center;
     }
 
-    &__social-text {
+    &-text {
         margin: 30px 0 0 0;
+
+
+        @include mobile {
+            margin: 40px 0 0 0;
+        }
+    }
+
+    &-copy {
         font-size: 16px;
         line-height: 19px;
         color: $white-info;
@@ -87,7 +167,6 @@
 .footer__social-item:active,
 .footer__social-item:focus {
     background-color: $pink-color;
-
 }
 
 .footer__social-item:hover .footer__social-link,

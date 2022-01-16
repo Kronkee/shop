@@ -2,6 +2,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include tablet {
+        width: 735px;
+        margin: 0 16px 0 16px;
+    }
+
+    @include mobile {
+        width: 343px;
+        margin: 0 auto;
+    }
 }
 
 .sales__item {
@@ -12,6 +22,17 @@
     align-items: center;
     border: 1px solid;
     flex-direction: column;
+
+    @include tablet {
+        width: 232px;
+        min-height: 168px;
+    }
+
+    @include mobile {
+        width: 343px;
+        min-height: 247px;
+        margin: 0 0 32px 0;        
+    }
 
     &--women {
         background-image: url(../img/for-women.jpg);
@@ -29,6 +50,17 @@
         background-image: url(../img/accesories.jpg);
         width: 100%;
         margin: 30px 0 0 0;
+
+        @include tablet {
+            margin: 19px 0 0 0;
+            min-height: 116px;
+        }
+
+        @include mobile {
+            margin: 0;
+            min-height: 111px;
+        }
+
     }
 
     &-text {

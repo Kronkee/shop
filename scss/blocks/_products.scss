@@ -9,6 +9,14 @@
         line-height: 36px;
         text-align: left;
         margin: 96px 0 0 0;
+
+        @include tablet {
+            margin: 155px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 64px 0 0 0;
+        }
     }
 
     &__subtitle {
@@ -16,13 +24,30 @@
         font-size: 14px;
         line-height: 17px;
         margin: 6px 0 0 0;
+
+        @include tablet {
+            margin: 3px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 3px 0 0 0;
+        }
     }
+
 
     &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 48px 0 0 0;
+
+        @include tablet {
+            margin: 73px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 65px 0 0 0;
+        }
     }
 
 
@@ -35,6 +60,15 @@
 
     &__item {
         width: 360px;
+        margin: 0 0 30px 0;
+
+        @include tablet {
+            margin: 0 0 16px 0;
+        }
+
+        @include mobile {
+            margin: 0 0 17px 0;
+        }
 
         &-text {
             font-weight: 300;
@@ -59,6 +93,14 @@
     &__info-wrp {
         padding: 25px 28px 20px 18px;
         background-color: $white-background;
+
+        @include tablet {
+            padding: 23px, 28px, 20px, 16px;
+        }
+
+        @include mobile {
+            padding: 25px, 29px, 20px, 16px;
+        }
     }
 
     &-img-wrp {
@@ -94,6 +136,7 @@
 
     &_cart-button-img {
         margin: 0 11px 0 0;
+        fill: $white-color;
     }
 
     &_overlay {
@@ -116,10 +159,33 @@
         border: 1px solid #FF6A6A;
         width: 211px;
         height: 47px;
+        margin: 19px 0 0 0;
+
+        @include tablet {
+            margin: 17px 0 0 0;
+        }
+
+        @include mobile {
+            margin: 25px 0 0 0;
+        }
     }
 
     &__btn:hover {
         background-color: $pink-color;
         color: $white-color;
+    }
+}
+
+.products__cart-button:hover,
+.products__cart-button:focus,
+.products__cart-button:active {
+    border: 2px solid $blue;
+
+    .products_cart-button-img {
+        fill: $blue;
+    }
+
+    .products_cart-button-text {
+        color: $blue;
     }
 }
