@@ -59,14 +59,18 @@
     }
 
     &__item {
-        width: 360px;
+        width: 31%;
+        min-height: 420px;
         margin: 0 0 30px 0;
+        
 
         @include tablet {
+            width: 49%;
             margin: 0 0 16px 0;
         }
 
         @include mobile {
+            width: 100%;
             margin: 0 0 17px 0;
         }
 
@@ -87,6 +91,7 @@
         &-img {
             width: 100%;
             min-height: 420px;
+            object-fit: cover;
         }
     }
 

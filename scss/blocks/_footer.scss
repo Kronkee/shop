@@ -98,11 +98,12 @@
 
 .footer__form {
     display: flex;
-    position: relative;
+    justify-content: center;
     height: 49px;
 
     @include tablet {
         margin: 0 0 140px 0;
+        width: 46%;
     }
 
     @include mobile {

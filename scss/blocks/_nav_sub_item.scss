@@ -19,7 +19,7 @@
 }
 
 .nav-sub-item__list {
-    margin: 12px 0 20px 0;
+    margin: 12px 0 20px 55px;
 }
 
 .nav-sub-item__list li {
@@ -30,13 +30,16 @@
     font-size: 14px;
     line-height: 17px;
     color: #6F6E6E;
-    margin: 0 0 0 55px;
 }
 
 .nav-cross-img {
-    display: none;
+    
 }
 
 .nav-cross__btn {
-    display: none;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 17px;
+        top: 16px;
 }
