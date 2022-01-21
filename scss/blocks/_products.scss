@@ -120,6 +120,14 @@
         opacity: 86%;
         position: absolute;
         top: 0;
+
+        @include tablet {
+            height: 100%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__cart-button {
@@ -165,6 +173,7 @@
         width: 211px;
         height: 47px;
         margin: 19px 0 0 0;
+        
 
         @include tablet {
             margin: 17px 0 0 0;
@@ -182,7 +191,11 @@
 }
 
 .products__cart-button:hover,
-.products__cart-button:focus,
+.products__cart-button:focus {
+    border: 2px solid $blue;
+}
+
+
 .products__cart-button:active {
     border: 2px solid $blue;
 

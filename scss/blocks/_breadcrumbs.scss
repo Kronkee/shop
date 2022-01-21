@@ -1,0 +1,36 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0;
+    margin-bottom: 1rem;
+    list-style: none;
+    text-transform: uppercase;
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 0.5rem;
+    text-transform: uppercase;
+    color: #636363;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: #636363;
+    content: var(--bs-breadcrumb-divider, "/")
+        /* rtl: var(--bs-breadcrumb-divider, "/") */
+    ;
+}
+
+.breadcrumb-item.active {
+    color: $pink-color;
+    text-transform: uppercase;
+}
+
