@@ -1,6 +1,6 @@
 .footer__img {
     background-image: url(../img/footer-img.jpg);
-    height: 448px;
+    min-height: 448px;
     background-size: cover;
 
     @include tablet {

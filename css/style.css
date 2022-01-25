@@ -626,13 +626,13 @@ input:focus {
 
 @media (max-width: 1599px) {
   .products__info-wrp {
-    padding: 23px, 28px, 20px, 16px;
+    padding: 23px 28px 20px 16px;
   }
 }
 
 @media (max-width: 767px) {
   .products__info-wrp {
-    padding: 25px, 29px, 20px, 16px;
+    padding: 25px 29px 20px 16px;
   }
 }
 
@@ -709,7 +709,7 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 400;
-  size: 16px;
+  font-size: 16px;
   line-height: 19px;
   text-decoration: none;
   color: #F16D7F;
@@ -754,7 +754,7 @@ input:focus {
 }
 
 .information {
-  height: 341px;
+  min-height: 341px;
   background-color: #222224;
   margin: 95px 0 0 0;
 }
@@ -856,7 +856,7 @@ input:focus {
 
 .footer__img {
   background-image: url(../img/footer-img.jpg);
-  height: 448px;
+  min-height: 448px;
   background-size: cover;
 }
 
@@ -1378,7 +1378,6 @@ input:focus {
 .cart__title {
   font-size: 24px;
   line-height: 29px;
-  font-weight: 400px;
   color: #222222;
   text-transform: uppercase;
   width: 262px;
@@ -1933,7 +1932,6 @@ input:focus {
 
 .arrivals__heading-text {
   font-style: normal;
-  font-weight: 400px;
   font-size: 24px;
   line-height: 29px;
   color: #F16D7F;
